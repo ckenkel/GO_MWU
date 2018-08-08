@@ -77,7 +77,23 @@ the generated GO summary really accounts for a substantial portion of what was g
 
 ### Recent Add-ons (By C. Kenkel, August 2018)
 
-The go_plotresults.R script can be used to pull from the GO_MWU output files in order to selectively plot individual genes giving rise to enriched terms. In addition to the iso2go file, you will need a correspondence table listing the associations between isogroups and gene names, as well as .csv files of your differential expression data (for both your entire expression dataset, and a particular subset of interest, e.g. genes passing a significane threshold for differential expression - those that you would use to create a Venn diagram) that have been subject to a variance stabilizing transformation (VSD). 
+The go_plotresults.R script can be used to pull from the GO_MWU output files in order to selectively plot individual genes giving rise to enriched terms. In addition to the iso2go file, you will need a correspondence table listing the associations between isogroups and gene names, formatted as follows:
+
+```
+isogroup0	Trypsin-7 OS=Anopheles gambiae GN=TRYP7 PE=2 SV=2 E(blastx)=2e-57
+isogroup10	Peroxidasin homolog OS=Homo sapiens GN=PXDN PE=1 SV=2 E(blastx)=5e-20
+isogroup100	Equistatin OS=Actinia equina PE=1 SV=1 E(blastx)=2e-28
+....
+```
+As well as .csv files of your differential expression data (for both your entire expression dataset, and a particular subset of interest, e.g. genes passing a significance threshold for differential expression - those that you would use to create a Venn diagram) that have been subject to a variance stabilizing transformation (VSD), formatted as follows:
+
+```
+X		Sample1			Sample2			... SampleN
+isogroup0	4.92037697074197	5.30723965350222	    5.45141108074481
+isogroup10	7.06261312648314	7.08791858377619	    6.60350582727201
+isogroup100	4.23159498224609	4.53978795089477	    4.11411700435435
+....
+```
 
 
 Suggested citation
