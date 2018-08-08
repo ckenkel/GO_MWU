@@ -75,6 +75,10 @@ In addition, the script prints out the number of GO categories displayed and the
 of "good candidates" that these categories account for. This is useful to evaluate whether
 the generated GO summary really accounts for a substantial portion of what was going on.
 
+### Recent Add-ons 
+
+The go_plotresults.R script can be used to pull from the GO_MWU output files in order to selectively plot individual genes giving rise to enriched terms. In addition to the iso2go file, you will need a correspondence table listing the associations between isogroups and gene names, as well as .csv files of your differential expression data (for both your entire expression dataset, and a particular subset of interest, e.g. genes passing a significane threshold for differential expression - those that you would use to create a Venn diagram) that have been subject to a variance stabilizing transformation (VSD). 
+
 
 Suggested citation
 ------------------
